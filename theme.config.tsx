@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { DocsThemeConfig } from 'nextra-theme-docs'
 
-import { DrowserLogo } from '@/components/logos/drowser-logo'
+import { GeldaLogo } from '@/components/logos/gelda-logo'
 
 import { getCurrentYear } from '@/lib/utils'
 
@@ -16,10 +16,10 @@ const config: DocsThemeConfig = {
   darkMode: true,
   banner: {
     key: '0.1.5-release',
-    text: <span>🎉 Drowser Studio v0.1.5 is released. Read more →</span>,
+    text: <span>🎉 Gelda v0.1.0 is released. Read more →</span>,
   },
   logo: function Logo() {
-    return <DrowserLogo width={100} height={100} />
+    return <GeldaLogo width={100} height={100} />
   },
   project: {
     link: DATA.repo,

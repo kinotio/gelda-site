@@ -20,7 +20,7 @@ import {
   NavigationMenuList,
 } from '@/components/ui/navigation-menu'
 import { Button } from '@/components/ui/button'
-import { DrowserLogo } from '@/components/logos/drowser-logo'
+import { GeldaLogo } from '@/components/logos/gelda-logo'
 
 import { ToggleTheme } from '@/components/layout/toogle-theme'
 
@@ -45,7 +45,7 @@ export const Navbar = () => {
     <header className="w-full top-0 mx-auto sticky z-40 p-4 flex justify-center items-center bg-card border-b border-secondary">
       <div className="w-[90%] md:w-[70%] lg:w-[75%] lg:max-w-screen-xl flex justify-between items-center">
         <Link href="/" className="flex items-center">
-          <DrowserLogo width={100} height={50} />
+          <GeldaLogo width={100} height={50} />
         </Link>
         {/* <!-- Mobile --> */}
         <MobileMenu isOpen={isOpen} setIsOpen={setIsOpen} />
@@ -104,7 +104,7 @@ const MobileMenu = ({
             <SheetHeader className="mb-4 ml-4">
               <SheetTitle className="flex items-center">
                 <Link href="/" className="flex items-center">
-                  <DrowserLogo width={100} height={50} />
+                  <GeldaLogo width={100} height={50} />
                 </Link>
               </SheetTitle>
             </SheetHeader>

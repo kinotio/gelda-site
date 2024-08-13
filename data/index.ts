@@ -1,24 +1,23 @@
 export const DATA = {
-  name: 'Drowser, explore new way to write tests',
-  url: 'https://drowser.kinotio.io',
+  name: 'Gelda, a self-hosted helpdesk assistant',
+  url: 'https://gelda.kinotio.io',
   description:
-    'A easy way to implement and write Selenium with TypeScript using Deno',
+    'AI-powered helpdesk assistant designed to provide users with an efficient and personalized support experience.',
   social_url: {
     github: 'https://github.com/kinotio',
     discord: 'https://discord.gg/cskvbKQA',
     linkedin: 'https://linkedin.com/company/kinotio',
     x: 'https://x.com/kinotio_io',
   },
-  repo: 'https://github.com/kinotio/drowser',
+  repo: 'https://github.com/kinotio/gelda',
   keywords: [
-    'Drowser',
-    'Drowser Studio',
+    'Gelda',
+    'Helpdesk',
     'Open Source',
-    'Test',
-    'Testing',
-    'e2e',
+    'AI',
+    'IA',
     'Free',
-    'Selenium',
+    'Ticketing',
   ],
   color: {
     gradient: {
