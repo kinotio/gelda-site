@@ -10,6 +10,7 @@ export const DATA = {
     x: 'https://x.com/kinotio_io',
   },
   repo: 'https://github.com/kinotio/gelda',
+  doc_repo: 'https://github.com/kinotio/gelda-site/tree/main',
   keywords: [
     'Gelda',
     'Helpdesk',
