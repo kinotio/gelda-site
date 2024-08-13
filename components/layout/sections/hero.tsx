@@ -18,7 +18,7 @@ export const HeroSection = () => {
         <div className="space-y-8">
           <BlurFade delay={0.1}>
             <div className="mx-auto text-center text-4xl md:text-9xl font-bold">
-              <h1>Explore new way to write tests</h1>
+              <h1>Self-hosted helpdesk assistant</h1>
             </div>
           </BlurFade>
 
@@ -70,13 +70,18 @@ export const HeroSection = () => {
 }
 
 const CodeBlock = () => {
-  const code = `hello world`
+  const pull = 'docker pull ghcr.io/kinotio/gelda:latest'
+  const run =
+    'docker run --name kinotio_gelda -p 3000:3000 -d ghcr.io/kinotio/gelda:latest'
 
   return (
     <div className="rounded-lg p-4 text-white mx-auto max-w-4xl">
       <div className="relative p-4 bg-black rounded-lg mt-4 border border-secondary">
         <SyntaxHighlighter language="bash" style={tomorrowNightBright}>
-          {code}
+          {pull}
+        </SyntaxHighlighter>
+        <SyntaxHighlighter language="bash" style={tomorrowNightBright}>
+          {run}
         </SyntaxHighlighter>
         <BorderBeam colorFrom="#fff" colorTo="#fff" />
       </div>
