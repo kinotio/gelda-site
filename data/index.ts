@@ -96,19 +96,19 @@ export const DATA = {
   ],
   faq: [
     {
-      question: 'What is this package used for?',
+      question: 'What are the system requirements for hosting Gelda',
       answer:
-        "This package allows you to write end-to-end (E2E) tests using Selenium WebDriver in Deno. It's designed to automate browser actions, enabling testing of web applications in different environments.",
+        "Gelda requires a minimum of 4GB RAM, 2 CPU cores, and 20GB of disk space. It's recommended to have Docker installed for easy setup.",
     },
     {
-      question: 'Why use Deno instead of Node.js?',
+      question: 'How do I install Gelda?',
       answer:
-        "Deno offers several advantages over Node.js, such as TypeScript support out of the box, secure by default (no access to files, network, or environment variables unless explicitly enabled), and a modern standard library. It's also designed with ES Modules, making it a good fit for modern JavaScript development.",
+        'You can install Gelda by running the setup script, and configuring the environment variables. Detailed installation instructions can be found in the documentation.',
     },
     {
-      question: 'What browsers are supported?',
+      question: 'How do I update the Gelda?',
       answer:
-        "The package supports major browsers like Chrome, Firefox, and Edge. Ensure you have the corresponding WebDriver executable installed and available in your system's PATH.",
+        'Updates can be applied by pulling the latest changes from the repository and running the update script. Make sure to backup your data before performing an update.',
     },
   ],
 }
