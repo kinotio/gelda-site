@@ -5,11 +5,10 @@ import SyntaxHighlighter from 'react-syntax-highlighter'
 import { tomorrowNightBright } from 'react-syntax-highlighter/dist/esm/styles/hljs'
 
 import { Button } from '@/components/ui/button'
-import AnimatedGridPattern from '@/components/magicui/animated-grid-pattern'
 import { BorderBeam } from '@/components/magicui/border-beam'
 import BlurFade from '@/components/magicui/blur-fade'
 
-import { cn } from '@/lib/utils'
+import Ripple from '@/components/magicui/ripple'
 
 export const HeroSection = () => {
   return (
@@ -55,16 +54,7 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      <AnimatedGridPattern
-        numSquares={30}
-        maxOpacity={0.4}
-        duration={3}
-        repeatDelay={1}
-        className={cn(
-          '[mask-image:radial-gradient(600px_circle_at_center,white,transparent)]',
-          'inset-x-0 inset-y-[-30%]'
-        )}
-      />
+      <Ripple mainCircleSize={400} />
     </section>
   )
 }
