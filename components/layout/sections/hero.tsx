@@ -42,7 +42,7 @@ export const HeroSection = () => {
                   className="w-5/6 md:w-1/4 font-bold group/arrow"
                   variant="outline"
                   onClick={() => {
-                    window.open('https://github.com/kinotio/drowser', '_blank')
+                    window.open('https://github.com/kinotio/gelda', '_blank')
                   }}
                 >
                   <Github className="size-5 mr-2" />
@@ -70,28 +70,12 @@ export const HeroSection = () => {
 }
 
 const CodeBlock = () => {
-  const code = `
-  import { driver } from "https://deno.land/x/drowser@${'v0.1.5'}/mod.ts";
-
-  driver({ browser: "chrome" })
-    .then(({ service }) => {
-      service.cases = [
-        {
-          name: "Verify Title",
-          fn: async ({ builder, assert }) => {
-            const title = await builder.getTitle();
-            assert.assertEquals(title, "Drowser");
-          },
-        },
-      ];
-    })
-    .catch((error) => console.log(error));
-  `
+  const code = `hello world`
 
   return (
     <div className="rounded-lg p-4 text-white mx-auto max-w-4xl">
       <div className="relative p-4 bg-black rounded-lg mt-4 border border-secondary">
-        <SyntaxHighlighter language="typescript" style={tomorrowNightBright}>
+        <SyntaxHighlighter language="bash" style={tomorrowNightBright}>
           {code}
         </SyntaxHighlighter>
         <BorderBeam colorFrom="#fff" colorTo="#fff" />
