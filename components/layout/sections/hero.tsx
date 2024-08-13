@@ -12,11 +12,11 @@ import Ripple from '@/components/magicui/ripple'
 
 export const HeroSection = () => {
   return (
-    <section className="container w-full relative">
+    <section className="container w-full relative flex-col items-center justify-center">
       <div className="relative z-10 grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-28">
         <div className="space-y-8">
           <BlurFade delay={0.1}>
-            <div className="mx-auto text-center text-4xl md:text-9xl font-bold">
+            <div className="mx-auto text-center text-7xl md:text-9xl font-bold">
               <h1>Self-hosted helpdesk assistant</h1>
             </div>
           </BlurFade>
@@ -54,27 +54,26 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      <Ripple mainCircleSize={400} />
+      <Ripple />
     </section>
   )
 }
 
 const CodeBlock = () => {
-  const pull = 'docker pull ghcr.io/kinotio/gelda:latest'
-  const run =
-    'docker run --name kinotio_gelda -p 3000:3000 -d ghcr.io/kinotio/gelda:latest'
+  const cmd = `docker pull ghcr.io/kinotio/gelda:latest
+
+docker run --name kinotio_gelda -p 3000:3000 -d ghcr.io/kinotio/gelda:latest`
 
   return (
-    <div className="rounded-lg p-4 text-white mx-auto max-w-4xl">
-      <div className="relative p-4 bg-black rounded-lg mt-4 border border-secondary">
-        <SyntaxHighlighter language="bash" style={tomorrowNightBright}>
-          {pull}
-        </SyntaxHighlighter>
-        <SyntaxHighlighter language="bash" style={tomorrowNightBright}>
-          {run}
-        </SyntaxHighlighter>
-        <BorderBeam colorFrom="#fff" colorTo="#fff" />
-      </div>
+    <div className="mx-auto max-w-4xl relative p-4 bg-black rounded-lg mt-4 border border-secondary">
+      <SyntaxHighlighter
+        language="bash"
+        style={tomorrowNightBright}
+        wrapLongLines
+      >
+        {cmd}
+      </SyntaxHighlighter>
+      <BorderBeam colorFrom="#fff" colorTo="#fff" />
     </div>
   )
 }
