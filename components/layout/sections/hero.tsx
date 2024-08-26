@@ -1,6 +1,5 @@
 'use client'
 
-import { useState, useEffect } from 'react'
 import { ChevronRight, Github } from 'lucide-react'
 import SyntaxHighlighter from 'react-syntax-highlighter'
 import { tomorrowNightBright } from 'react-syntax-highlighter/dist/esm/styles/hljs'
@@ -12,27 +11,6 @@ import BlurFade from '@/components/magicui/blur-fade'
 import Ripple from '@/components/magicui/ripple'
 
 export const HeroSection = () => {
-  const [circleSize, setCircleSize] = useState(400)
-
-  const calculateCircleSize = () => {
-    const screenWidth = window.innerWidth
-    if (screenWidth > 1024) {
-      setCircleSize(400)
-    } else if (screenWidth > 640) {
-      setCircleSize(200)
-    } else {
-      setCircleSize(10)
-    }
-  }
-
-  useEffect(() => {
-    calculateCircleSize()
-    window.addEventListener('resize', calculateCircleSize)
-    return () => window.removeEventListener('resize', calculateCircleSize)
-  }, [])
-
-  console.log(circleSize)
-
   return (
     <section className="w-full relative flex-col items-center justify-center">
       <div className="container relative z-10 grid place-items-center lg:max-w-screen-xl gap-8 mx-auto py-20 md:py-28">
@@ -76,7 +54,9 @@ export const HeroSection = () => {
         </div>
       </div>
 
-      <Ripple mainCircleSize={circleSize} />
+      <div>
+        <Ripple mainCircleSize={200} />
+      </div>
     </section>
   )
 }
